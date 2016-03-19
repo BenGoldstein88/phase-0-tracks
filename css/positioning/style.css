@@ -1,6 +1,15 @@
 #octopus{
-  margin-left: 50%;
-  margin-top: 50px;
+  margin-left: 42%;
+  margin-top: 200px;
 }
-#hat{}
-#glasses{}
+#hat{
+  position: absolute;
+  top: 120px;
+  left: 40%;
+
+}
+#glasses{
+position: absolute;
+top: 310px;
+left: 46%;
+}

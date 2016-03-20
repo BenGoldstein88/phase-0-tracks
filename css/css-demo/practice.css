@@ -16,3 +16,11 @@
 
 
 }
+
+h2:hover {
+    color: #FF00FF;
+}
+
+p:first-child {
+    color: purple;
+}

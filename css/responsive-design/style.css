@@ -15,7 +15,7 @@ cite {
 }
 
 /* you're welcome to edit the
-image, figure, and figcaption CSS if you'd like, 
+image, figure, and figcaption CSS if you'd like,
 but it's optional! */
 img {
   width: 100%;
@@ -29,4 +29,41 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+#external-links {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+main {
+  display: inline-block;
+  width: 75%;
+
+
+}
+
+#title-header{
+  padding: 10px;
+
+}
+
+@media screen and (max-width: 500px) {
+ h1{
+  font-size: 15px;
+ }
+ #external-links{
+  width: 100%;
+ }
+ main{
+  width: 100%;
+ }
+
+
 }

@@ -1,0 +1,32 @@
+.column-2{
+  display: inline-block;
+  width: 48%;
+  background-color: blue;
+  vertical-align: top;
+
+  font-family: helvetica;
+  color: purple;
+
+}
+.column-1{
+  display: inline-block;
+  width: 48%;
+  background-color: red;
+  vertical-align: top;
+
+  font-family: impact;
+  color: gray;
+}
+header{
+    background-color: pink;
+
+  font-family: arial;
+  color: goldenrod;
+}
+footer{
+  background-color: orange;
+  margin: 0 auto;
+  width: 80%;
+
+  color: gold;
+}

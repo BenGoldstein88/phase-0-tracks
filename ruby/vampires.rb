@@ -1,3 +1,9 @@
+puts "How many employees will be processed?"
+num_employees = gets.chomp
+num_employees = num_employees.to_i
+
+while (num_employees != 0)
+
 puts "What is your name?"
 name = gets.chomp
 
@@ -44,4 +50,7 @@ elsif real_dob != dob && ( !garlic && !health)
   puts "Almost certainly a vampire."
 else
   puts "Results inconclusive."
+end
+
+num_employees = num_employees - 1
 end

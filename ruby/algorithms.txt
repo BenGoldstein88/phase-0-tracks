@@ -1,0 +1,26 @@
+-Determine desired floor
+-If on desired floor, stop and exit elevator.
+-Otherwise
+  -Identify button corresponding to desired floor
+  -Press button
+  -Wait
+-When door opens,
+  -Determine whether current floor = desired floor
+  -If so, exit
+  -Else, keep waiting
+
+  ------------------------
+
+"Making Toast"
+-Get bread
+-Open bread
+-Remove slice of bread
+-Close bread
+-Replace bread
+-Put slice of bread in toaster
+-Choose desired done-ness
+-Initiate toaster
+-Until toaster is done toasting
+  -Wait
+-When toaster dings, remove toast.
+-Enjoy

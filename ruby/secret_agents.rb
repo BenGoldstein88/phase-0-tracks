@@ -55,11 +55,35 @@ return password
 
 end
 
+
+puts "Type '1' to encrypt or '2' to decrypt"
+decision = gets.chomp
+decision = decision.to_i
+if decision == 1
+  puts "Password to encrypt: "
+  password_e = gets.chomp
+  password_e_new = encrypt(password_e)
+  puts password_e_new
+
+elsif decision == 2
+  puts "Password to decrypt: "
+  password_d = gets.chomp
+  password_d_new = decrypt(password_d)
+  puts password_d_new
+
+else
+  puts "Don't screw with me here."
+end
+
+=begin
+
 encrypt("abc")
 encrypt("zed")
 decrypt("bcd")
 decrypt("afe")
 decrypt(encrypt("The duck flies at midnight".downcase))
+
+=end
 
 # Had to downcase it to account for caps. decrypt is using the return value of encrypt (which is a string) as its argument. It expects a string, so all's well.
 

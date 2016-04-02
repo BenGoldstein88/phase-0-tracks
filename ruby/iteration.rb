@@ -45,8 +45,22 @@ end
 puts ages
 
 
+# Begin release 2
 
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+hash = {name: "jim", age: 10, state: "NV"}
 
+# 1
+
+new_nums = []
+
+nums.each do |i|
+  if i > 3
+    new_nums << i
+  end
+end
+
+puts new_nums
 
 
 

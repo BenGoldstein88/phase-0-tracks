@@ -20,9 +20,11 @@ ages.each do |name, age|
 puts "#{name} is #{age} years old."
 end
 
+###
+
 puts "Frogs pre-map is: #{frogs}"
 frogs.map do |name|
-name = name + "Hammersmith"
+name = name + " Hammersmith"
 puts "This frog is #{name}."
 end
 puts "Frogs post-map is: #{frogs}."
@@ -30,10 +32,19 @@ puts "Frogs post-map is: #{frogs}."
 
 puts "Frogs pre-map! is: #{frogs}"
 frogs.map! do |name|
-name = name + "Hammersmith"
-puts "This frog is #{name}."
+  name + " Hammersmith"
 end
 puts "Frogs post-map! is: #{frogs}."
+
+###
+
+ages.map do |name, age|
+  puts "#{name} is now #{age+5} years old."
+end
+
+puts ages
+
+
 
 
 

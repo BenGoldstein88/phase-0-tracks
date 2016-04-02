@@ -51,7 +51,7 @@ nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 hash = {jim: 5, john: 10, joe: 20}
 
 # 1
-
+#Get numbers bigger than 3 (Remove all numbers smaller than 3)
 new_nums = []
 
 nums.each do |i|
@@ -62,7 +62,7 @@ end
 
 puts new_nums
 
-
+#Delete anyone who is under 10 years old
 puts hash
 hash.each do |name, age|
   if hash[name] < 10
@@ -75,7 +75,9 @@ puts hash
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 hash = {jim: 5, john: 10, joe: 20}
 new_nums = []
+new_hash = {}
 
+# Keep numbers greater than 4
 puts new_nums
 
 nums.each do |i|
@@ -86,7 +88,7 @@ end
 
 puts new_nums
 
-new_hash = {}
+# Keep people 10 or older
 puts hash
 puts new_hash
 hash.each do |name, age|
@@ -97,6 +99,34 @@ end
 puts hash
 puts new_hash
 
+
+# 3
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+hash = {jim: 5, john: 10, joe: 20}
+new_nums = []
+new_hash = {}
+
+# Keep numbers less than 6
+puts new_nums
+nums.each do |i|
+  if i < 6
+    new_nums << i
+  end
+end
+puts new_nums
+
+
+# Keep people less younger than 15
+puts hash
+puts new_hash
+
+hash.each do |name, age|
+  if hash[name] < 15
+    new_hash[name] = age
+  end
+end
+puts hash
+puts new_hash
 
 
 

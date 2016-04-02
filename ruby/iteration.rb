@@ -128,6 +128,22 @@ end
 puts hash
 puts new_hash
 
+# 4
+
+# Didn't use block. Will come back to this one. But removes the last value until the length is less than 6.
+puts nums
+
+until nums.length < 6
+  nums.pop
+end
+
+puts nums
+
+# removes kids younger than 10
+puts hash
+hash.delete_if{|name, age| age < 10}
+puts hash
+
 
 
 

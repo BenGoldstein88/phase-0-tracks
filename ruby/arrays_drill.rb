@@ -1,3 +1,21 @@
+def build_array(x, y, z)
+  arr = []
+  arr << x
+  arr << y
+  arr << z
+  return arr
+end
+
+def add_to_array(arr, val)
+  arr << val
+  return arr
+end
+
+
+
+
+
+
 practice = [0]
 
 p practice
@@ -31,3 +49,8 @@ other = ["bob", "jim", "johnny"]
 result = practice + other
 
 p result
+
+p build_array(4, "juice", false)
+
+p add_to_array([1, 2, 3], "bob")
+p add_to_array([2], true)

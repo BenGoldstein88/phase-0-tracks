@@ -1,4 +1,4 @@
-# Method takes string. Splits string into array. Use dummy variable to swap first and last value of new array. Compare each letter in new array to array 'aeiou' and if there's a match, set it equal to the proceeding index in aeiou (excepting for u, or something modulo would work).
+# Method takes string. Splits string into array. Use dummy variable to swap first and last value of new array. Compare each letter in new array to array 'aeiou' and if there's a match, set it equal to the proceeding index in aeiou (excepting for u, or something modulo would work). Same principle with consonants.
 def is_a_vowel(char)
   vowels = ['a', 'e', 'i', 'o', 'u']
   index = 0
@@ -10,24 +10,19 @@ def is_a_vowel(char)
     index = index + 1
 
   end
-  puts isVowel
 return isVowel
 
 end
 
-
-
-def code_name
-  puts "Enter real name:"
-  realname = gets.chomp
+def code_name(name)
+  realname = name
   realname.downcase!
-    # swap first and last name
+      # swap first and last name
     realname = realname.split(' ')
     swap = realname[0]
     realname[0] = realname.last
     realname[realname.length-1] = swap
     realname = realname.join(' ')
-
     # swap letters
     realname = realname.split('')
 
@@ -75,4 +70,17 @@ def code_name
   return newname
 end # method
 
-code_name
+
+done = false
+puts "Enter name, or type 'quit' to exit: "
+input = gets.chomp
+while done == false
+  if input == 'quit'
+    done = true
+    puts "Thanks! Have a nice day!"
+  else
+    code_name(input)
+    puts "Enter name, or type 'quit' to exit: "
+    input = gets.chomp
+  end
+end

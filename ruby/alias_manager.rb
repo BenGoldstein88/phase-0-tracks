@@ -70,7 +70,8 @@ def code_name(name)
   return newname
 end # method
 
-
+# initialize database and loop to prompt user for names and store them
+database = {}
 done = false
 puts "Enter name, or type 'quit' to exit: "
 input = gets.chomp
@@ -79,8 +80,15 @@ while done == false
     done = true
     puts "Thanks! Have a nice day!"
   else
-    code_name(input)
+    output = code_name(input)
+    database[input] = output
     puts "Enter name, or type 'quit' to exit: "
     input = gets.chomp
   end
+end
+
+#outputs realname and codename
+database.each do |name, code|
+  name = name.split(/ |\_/).map(&:capitalize).join(" ")
+  puts "#{code}'s real name is actually #{name}."
 end

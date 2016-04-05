@@ -28,6 +28,28 @@ class Puppy
     puts "*plays dead*"
   end
 
+  def initialize
+    puts "Initializing new puppy instance..."
+  end
+
+
+
+end
+
+# monster class
+class Monster
+# gibberish methods
+  def horn(int)
+    puts "It sprouted #{int} horns!"
+  end
+
+  def grow(int)
+    puts "It grew #{int} inches!"
+  end
+
+  def roar
+    puts "ROARRRRRRRRRR!"
+  end
 
 
 end
@@ -38,3 +60,19 @@ tod.speak(5)
 tod.roll_over
 tod.dog_years(5)
 tod.play_dead
+
+#loop to init. 50 monsters and store in array
+x = 0
+monster_database = []
+while x < 50
+  new = Monster.new
+  monster_database << new
+  x = x+1
+end
+
+#loop to print database with method calls
+monster_database.each do |monster|
+  monster.horn(3)
+  monster.grow(20)
+  monster.roar
+end

@@ -1,6 +1,6 @@
 class Santa
   attr_reader :reindeer_ranking
-  attr_accessor :gender, :ethnicity
+  attr_accessor :gender, :ethnicity, :age
 
   def speak
     puts "Ho, ho, ho! Haaaappy holidays!"
@@ -35,13 +35,31 @@ class Santa
 
 end
 
+def santa_machine
+  example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+  example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+  300.times do
+    john = Santa.new(example_genders.sample, example_ethnicities.sample)
+    john.age = rand(140)
+    john_stuff = [john.gender, john.ethnicity, john.age]
+    puts john_stuff
+  end
+
+
+end
+
+santa_machine
+
+
+=begin
 bill = Santa.new("female", "asian")
 puts bill.gender
 puts bill.ethnicity
 puts bill.reindeer_ranking
 bill.get_mad_at("Rudolph")
 puts bill.reindeer_ranking
-
+=end
 
 
 

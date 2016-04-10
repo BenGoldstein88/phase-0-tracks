@@ -15,4 +15,9 @@ attr_accessor :contents
     @contents << item
   end
 
+  def delete_item(item)
+    @contents.delete(item)
+  end
+
+
 end

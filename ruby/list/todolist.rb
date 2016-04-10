@@ -19,5 +19,8 @@ attr_accessor :contents
     @contents.delete(item)
   end
 
+  def get_item(index)
+    @contents[index]
+  end
 
 end

@@ -11,4 +11,8 @@ attr_accessor :contents
     @contents
   end
 
+  def add_item(item)
+    @contents << item
+  end
+
 end

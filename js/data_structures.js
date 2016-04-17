@@ -12,3 +12,20 @@ for (var i = 0; i < colors.length; i++){
 }
 
 console.log(horses)
+
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+
+  this.getInfo = function(){ console.log("This is a " + year + " " + make + " " + model + ".")}
+
+  this.vroom = function() { console.log("Vrooooooommmmm!")}
+
+
+}
+
+var junker = new Car("Buick", "Oldsmobile", "1982");
+
+junker.getInfo();
+junker.vroom();

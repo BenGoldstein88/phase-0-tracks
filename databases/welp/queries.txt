@@ -15,3 +15,6 @@ sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars
 Bradford|Pitt|Grundy Hollow Wedding Chapel|5|Wonderful!
 Mandy|Kaling|Amir's Towing|3|Not bad!
 Angela|Jolie|The Beagle Nightclub|1|Awful!
+
+3.
+

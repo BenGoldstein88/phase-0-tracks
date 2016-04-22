@@ -1,0 +1,58 @@
+1.
+
+sqlite> SELECT * FROM parties;
+
+
+1|Democrat
+2|Republican
+3|Independent
+
+
+2.
+
+sqlite> INSERT INTO voters (name, age, party_id) VALUES ("Mark", 19, 3);
+
+sqlite> SELECT * FROM voters;
+
+1|James|30|1
+2|Margaret|51|2
+3|Mark|19|3
+
+sqlite> UPDATE voters SET age=20 WHERE name="Mark";
+
+sqlite> SELECT * FROM voters;
+
+1|James|30|1
+2|Margaret|51|2
+3|Mark|20|3
+
+3.
+
+sqlite> SELECT * FROM voters, parties WHERE voters.party_id= parties.id;
+
+1|James|30|1|1|Democrat
+2|Margaret|51|2|2|Republican
+3|Mark|20|3|3|Independent
+
+4.
+
+sqlite> SELECT voters.name, voters.age, voters.party_id, parties.name FROM voters, parties WHERE voters.party_id= parties.id;
+
+James|30|1|Democrat
+Margaret|51|2|Republican
+Mark|20|3|Independent
+
+5.
+
+sqlite> DELETE FROM voters WHERE name="Mark";
+sqlite> SELECT * FROM voters;
+
+1|James|30|1
+2|Margaret|51|2
+
+6.
+
+sqlite> SELECT voters.name, parties.name FROM voters JOIN parties ON voters.party_id = parties.id;
+
+James|Democrat
+Margaret|Republican

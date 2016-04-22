@@ -18,3 +18,14 @@ Angela|Jolie|The Beagle Nightclub|1|Awful!
 
 3.
 
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM users, businesses, reviews WHERE reviews.business_id = businesses.id AND reviews.user_id = users.id;
+
+Bradford|Pitt|Grundy Hollow Wedding Chapel|5|Wonderful!
+Mandy|Kaling|Amir's Towing|3|Not bad!
+Angela|Jolie|The Beagle Nightclub|1|Awful!
+
+4.
+
+sqlite> SELECT * FROM reviews JOIN businesses WHERE reviews.business_id = businesses.id AND businesses.id = 2;
+
+2|3|Not bad!|2|2|2|Amir's Towing

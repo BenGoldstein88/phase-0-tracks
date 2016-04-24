@@ -103,3 +103,7 @@ while done == false
     end
   end
 end
+
+# There are plenty more semi-useless features that could be implemented, like searching by year or album.
+# Maybe albums should be its own table w/ foreign key
+# The driver code could be cleaned-up with sub-methods and maybe a case statement.

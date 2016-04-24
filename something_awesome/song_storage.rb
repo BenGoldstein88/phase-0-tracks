@@ -81,10 +81,11 @@ while done == false
     create_song(db, name, artist, album, key, year)
 
   elsif input == '3' # get info on a song
-                      # currently only works when input is in quotes
+
 
     puts "What song would you like information on?"
     search = gets.chomp
+    search = "'" + search + "'"
     puts "Here you go!"
     puts list_song(db, search)
 

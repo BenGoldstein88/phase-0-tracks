@@ -55,7 +55,8 @@ while done == false
   input = gets.chomp
   if input == '1' # list all songs
     puts "Here you go!"
-    list_songs(db)
+    puts list_songs(db)
+    puts "Anything else? (1: List all songs, 2: Add a song, 3: Get info on a song, 4: Exit)"
   elsif input == '2' # add a song
 
     puts "What's the song name?"
@@ -68,7 +69,7 @@ while done == false
     key = gets.chomp
     puts "What year was the song released?"
     year = gets.chomp
-    puts "Thanks!"
+    puts "Thanks! Anything else? (1: List all songs, 2: Add a song, 3: Get info on a song, 4: Exit)"
 
     create_song(db, name, artist, album, key, year)
 

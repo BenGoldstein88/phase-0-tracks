@@ -32,10 +32,15 @@ end
 
 # method to list all songs
 
-def list_songs(db)
+def list_all_songs(db)
   db.execute("SELECT * FROM songs")
 end
 
+# method to list a single song
+
+def list_song(db, song)
+  db.execute("SELECT * FROM songs WHERE song_name=#{song}")
+end
 
 
 # sample song addition
@@ -54,9 +59,11 @@ error_count = 0
 while done == false
   input = gets.chomp
   if input == '1' # list all songs
+
     puts "Here you go!"
-    puts list_songs(db)
+    puts list_all_songs(db)
     puts "Anything else? (1: List all songs, 2: Add a song, 3: Get info on a song, 4: Exit)"
+
   elsif input == '2' # add a song
 
     puts "What's the song name?"
@@ -74,9 +81,12 @@ while done == false
     create_song(db, name, artist, album, key, year)
 
   elsif input == '3' # get info on a song
+                      # currently only works when input is in quotes
 
     puts "What song would you like information on?"
     search = gets.chomp
+    puts "Here you go!"
+    puts list_song(db, search)
 
   elsif input == '4' # exit
     puts "Thanks!"

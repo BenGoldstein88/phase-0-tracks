@@ -88,6 +88,7 @@ while done == false
     search = "'" + search + "'"
     puts "Here you go!"
     puts list_song(db, search)
+    puts "Anything else? (1: List all songs, 2: Add a song, 3: Get info on a song, 4: Exit)"
 
   elsif input == '4' # exit
     puts "Thanks!"

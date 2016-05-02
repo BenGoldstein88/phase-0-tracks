@@ -25,3 +25,12 @@ post '/students' do
 end
 
 # add static resources
+
+get '/other' do
+  erb :other
+end
+
+post '/other' do
+
+  redirect '/'
+end
